@@ -16,6 +16,7 @@
 		AC09A7EE21E6E1DC003B5DD4 /* cupcakes.json in Resources */ = {isa = PBXBuildFile; fileRef = AC09A7EC21E6E1DC003B5DD4 /* cupcakes.json */; };
 		AC09A7F021E6E23F003B5DD4 /* ToppingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC09A7EF21E6E23F003B5DD4 /* ToppingsViewController.swift */; };
 		AC09A7F221E6E24E003B5DD4 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC09A7F121E6E24E003B5DD4 /* OrderViewController.swift */; };
+		AC2A621021E83660000F7353 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A620F21E83660000F7353 /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		AC09A7EC21E6E1DC003B5DD4 /* cupcakes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cupcakes.json; sourceTree = "<group>"; };
 		AC09A7EF21E6E23F003B5DD4 /* ToppingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToppingsViewController.swift; sourceTree = "<group>"; };
 		AC09A7F121E6E24E003B5DD4 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		AC2A620F21E83660000F7353 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				AC09A7E021E6E155003B5DD4 /* Assets.xcassets */,
 				AC09A7E221E6E155003B5DD4 /* LaunchScreen.storyboard */,
 				AC09A7E521E6E155003B5DD4 /* Info.plist */,
+				AC2A620F21E83660000F7353 /* Product.swift */,
 			);
 			path = GetCupcake;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			files = (
 				AC09A7DC21E6E154003B5DD4 /* ViewController.swift in Sources */,
 				AC09A7F021E6E23F003B5DD4 /* ToppingsViewController.swift in Sources */,
+				AC2A621021E83660000F7353 /* Product.swift in Sources */,
 				AC09A7DA21E6E154003B5DD4 /* AppDelegate.swift in Sources */,
 				AC09A7F221E6E24E003B5DD4 /* OrderViewController.swift in Sources */,
 			);
