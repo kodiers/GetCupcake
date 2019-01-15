@@ -43,6 +43,14 @@ class ViewController: UITableViewController {
         cell.detailTextLabel?.text = cake.description
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let toppingsViewController = storyboard?.instantiateViewController(withIdentifier: "ToppingsViewController") as? ToppingsViewController else {
+            fatalError("Unable to load ToppingsViewController from storyboard")
+        }
+        toppingsViewController.cake = cakes[indexPath.row]
+        navigationController?.pushViewController(toppingsViewController, animated: true)
+    }
 
 }
 
