@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intents
 
 class OrderViewController: UIViewController {
 
@@ -31,6 +32,7 @@ class OrderViewController: UIViewController {
         let newOrder = Order(cake: cake, toppings: toppings)
         showDetails(newOrder)
         send(newOrder)
+        donate(newOrder)
         
         title = "All set!"
         navigationItem.hidesBackButton = true
@@ -68,6 +70,29 @@ class OrderViewController: UIViewController {
     
     @objc func done() {
         navigationController?.popToRootViewController(animated: true)
+    }
+    
+    func donate(_ order: Order) {
+        let activity = NSUserActivity(activityType: "com.techforline.GetCupcake.order")
+        // give it a title that will be displayed to users
+        let orderName = order.name
+        if ["A", "E", "I", "O", "U"].contains(orderName.first) {
+            activity.title = "Order an \(orderName)."
+        } else {
+            activity.title = "Order a \(orderName)."
+        }
+        // allow Siri to index this and use it for voice-matched queries
+        activity.isEligibleForSearch = true
+        activity.isEligibleForPrediction = true
+        
+        let encoder = JSONEncoder()
+        if let orderData = try? encoder.encode(order) {
+            activity.userInfo = ["order": orderData]
+        }
+        activity.persistentIdentifier = NSUserActivityPersistentIdentifier(order.name)
+        // suggest a way for the user to trigger this shortcut
+        activity.suggestedInvocationPhrase = "I need a cupcake!"
+        self.userActivity = activity
     }
 
 }
